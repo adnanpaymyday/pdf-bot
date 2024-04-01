@@ -42,7 +42,7 @@ def get_conversation_chain(vectorstore):
     # llm = ChatOpenAI()
     # llm = HuggingFaceHub(repo_id="mistralai/Mistral-7B-Instruct-v0.2", model_kwargs={"temperature":0.5, "max_length":512})
     # llm = HuggingFaceHub(repo_id="google/gemma-7b-it", model_kwargs={"temperature":0.5, "max_length":512})
-    llm = HuggingFaceHub(repo_id="google/gemma-7b-it", model_kwargs={"temperature":0.5, "max_length":512})
+    llm = HuggingFaceHub(repo_id="google/gemma-7b", model_kwargs={"temperature":0.5, "max_length":512})
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
